@@ -104,6 +104,8 @@ Extra Trees introduces additional randomness in split selection compared to Rand
 PerovskiteML/
 ├── data/
 │   └── perovskites.xlsx                  # 588 perovskite compounds dataset (formula + target)
+├── docs/
+│   └── project_report.pdf                # Detailed project report / paper
 ├── notebooks/
 │   ├── 01_eda.ipynb                      # Exploratory Data Analysis
 │   ├── 02_featurization_benchmark.ipynb  # CBFV feature generation & model screening
