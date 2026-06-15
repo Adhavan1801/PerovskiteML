@@ -102,20 +102,20 @@ Extra Trees introduces additional randomness in split selection compared to Rand
 
 ```
 PerovskiteML/
-├── CODE.ipynb                          # Full pipeline: featurization → modelling → evaluation
-├── FINAL_ML.ipynb                      # Final cleaned notebook with best model
-├── adhavan.ipynb                       # Exploratory analysis
-├── cbfv.csv                            # Pre-computed CBFV feature matrix
-├── GROUP_No._1/
-│   ├── CODE.ipynb                      # Group submission notebook
-│   ├── DATASET/
-│   │   └── data.xlsx                   # 588 perovskite compounds (formula + Debye temperature)
-│   ├── MODELS/
-│   │   ├── XGBoost_Regressor bootstraped.ipynb
-│   │   ├── LGBM.ipynb
-│   │   ├── EXTRA TREES.ipynb
-│   │   └── GRADIENT_BOOSTING_REGRESSOR.ipynb
-│   └── REPORT.pdf
+├── data/
+│   └── perovskites.xlsx                  # 588 perovskite compounds dataset (formula + target)
+├── notebooks/
+│   ├── 01_eda.ipynb                      # Exploratory Data Analysis
+│   ├── 02_featurization_benchmark.ipynb  # CBFV feature generation & model screening
+│   ├── 03_xgboost.ipynb                  # XGBoost Regressor
+│   ├── 04_lightgbm.ipynb                 # LightGBM Regressor
+│   ├── 05_extra_trees.ipynb              # Extra Trees Regressor (best model)
+│   ├── 06_gradient_boosting.ipynb        # Gradient Boosting Regressor
+│   └── 07_full_pipeline.ipynb            # Full end-to-end pipeline
+├── results/
+│   └── model_comparison.csv              # Model comparison results (R² and RMSE)
+├── .gitignore
+├── requirements.txt
 └── README.md
 ```
 
@@ -147,13 +147,15 @@ PerovskiteML/
 ## Setup
 
 ```bash
+# Clone the repository
 git clone https://github.com/Adhavan1801/PerovskiteML.git
 cd PerovskiteML
 
-pip install cbfv scikit-learn xgboost lightgbm numpy pandas openpyxl
+# Install the required dependencies
+pip install -r requirements.txt
 ```
 
-Open `FINAL_ML.ipynb` in Jupyter or Google Colab and run all cells.
+Open any notebook in `notebooks/` in Jupyter or Google Colab to run the pipeline.
 
 ---
 
