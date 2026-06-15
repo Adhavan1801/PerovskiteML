@@ -1,0 +1,5 @@
+model,r2_score,rmse_k,notes
+Extra Trees (tuned),0.7763,28.17,Best RMSE — selected as final model
+XGBoost (bootstrapped),0.7783,30.19,Highest R²
+LightGBM,0.7676,,Fastest training
+Gradient Boosting,0.7543,30.21,Slowest — diminishing returns
