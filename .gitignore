@@ -41,5 +41,6 @@ desktop.ini
 # Keep data folder tracked but ignore large raw dumps
 *.log
 
-# PDFs (reports/presentations - keep out of repo)
+# PDFs (reports/presentations - keep out of repo, except final project report)
 *.pdf
+!docs/project_report.pdf
